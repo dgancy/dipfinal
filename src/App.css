@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e6e6e6;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.navbar {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.div-body {
+  padding-left: 24px;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding-top: 10px;
+}
+
+.navbtn {
+  background-color: rgb(0, 0, 0);
+  padding: 1px;
+  margin: 1px 10px;
+  position: static;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.normal-mode {
+  background-color: rgba(41, 41, 255, 0.938);
+  color: white;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.damo {
+  padding: 2px;
+  color: white;
+  margin: 2px 8px;
+  position: static;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.loginbtn {
+  position: absolute;
+  top: 8px;
+  right: 2.5%;
+  color: white;
+}
+
+.test {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 64px;
+}
+
+.testimg {
+  max-height: 125px;
+}
+
+.testinput {
+  text-align: left;
+  position: relative;
+}
+
+.testbutton {
+  text-align: center;
+}
+
+input {
+  font-size: 18px;
+  width: 200px;
+}
+
+table {
+  padding-bottom: 10px;
+}
+
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  width: 240px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.button1 {
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  margin: 4px 18px;
+  padding: 8px 40px;
+  border: none;
+  position: relative;
+  top: 25px;
+}
+
+.center {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  width: 500px;
+  font-size: 18px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+}
+
+.loginbtn:hover {
+  background-color: blue;
+}
+
+.button1:hover {
+  animation-delay: 2s;
+  background-color: rgb(119, 119, 119);
+}
+
+.cardtheme1 {
+  position: absolute;
+  top: 14%;
+  right: 4%;
+}
+
+.cardtheme2 {
+  position: absolute;
+  top: 14%;
+  right: 14%;
+}
+
+.cardtheme3 {
+  position: absolute;
+  top: 14%;
+  right: 24%;
+}
+
+.bfaaddon {
+  position: absolute;
+  top: 16.5%;
+  right: 45%;
+}
+
+.bfarajz {
+  position: absolute;
+  top: 30%;
+  right: 25%;
+}
+
+.mesterinput1 {
+  width: 100px;
+}
+
+.mesterinput2 {
+  width: 100px;
+}
+
+.mesterform{
+  position: absolute;
+  left: 5%;
+}
+
+.mesterbtn{
+  position: absolute;
+  left: 115%;
+}
+.mestera{
+  padding-right: 15px;
+}
+.adminsight{
+  position: absolute;
+  left: 45%;
+}
