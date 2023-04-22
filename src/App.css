@@ -1,34 +1,34 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia;
   box-sizing: border-box;
 }
 
 body {
-  background: #e6e6e6;
+  background-color: rgb(80, 0, 0);
+  color: white;
   min-height: 100vh;
   width: 100%;
   position: relative;
+  overflow: auto;
+}
+
+a {
+  font-family: Georgia;
+}
+
+pre {
+  color: white;
 }
 
 .navbar {
   background-color: rgb(0, 0, 0);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .div-body {
   padding-left: 24px;
-}
-
-.footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-  text-align: center;
-  background-color: rgb(0, 0, 0);
-  color: white;
-  padding-top: 10px;
 }
 
 .navbtn {
@@ -49,18 +49,13 @@ body {
 }
 
 .light-mode {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   color: black;
 }
 
-.normal-mode {
-  background-color: rgba(41, 41, 255, 0.938);
+.red-mode {
+  background-color: rgb(80, 0, 0);
   color: white;
-}
-
-.light-mode {
-  background-color: white;
-  color: black;
 }
 
 .damo {
@@ -74,35 +69,154 @@ body {
   cursor: pointer;
 }
 
-.loginbtn {
-  position: absolute;
-  top: 8px;
-  right: 2.5%;
-  color: white;
-}
-
 .test {
   width: 100%;
   text-align: center;
-  padding-bottom: 64px;
+  padding-bottom: 24px;
 }
 
-.testimg {
-  max-height: 125px;
+.bevitel {
+  width: 100%;
+  padding-bottom: 18px;
+  padding-left: 5%;
 }
 
-.testinput {
-  text-align: left;
-  position: relative;
+.square-normal {
+  display: flex;
+  width: 250px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  left: 10%;
+  top: 40%;
+  border-style: solid;
 }
 
-.testbutton {
+.square-edge {
+  display: flex;
+  width: 125px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  left: 47%;
+  border-style: solid;
+}
+
+.square-right_1 {
+  display: flex;
+  width: 125px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  left: 60%;
+  top: 100%;
+  border-style: solid;
+}
+
+.square-left_1 {
+  display: flex;
+  width: 125px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  left: 33%;
+  top: 100%;
+  border-style: solid;
+}
+
+.square-middle_1 {
+  display: flex;
+  width: 125px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  left: 40%;
+  top: 100%;
+  border-style: solid;
+}
+
+.square-middle_2 {
+  display: flex;
+  width: 125px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  left: 54%;
+  top: 100%;
+  border-style: solid;
+}
+
+.square-right_2 {
+  display: flex;
+  width: 125px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  left: 68%;
+  top: 100%;
+  border-style: solid;
+}
+
+.square-left_2 {
+  display: flex;
+  width: 125px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  left: 27%;
+  top: 100%;
+  border-style: solid;
+}
+
+.lowpad {
   text-align: center;
+  padding-bottom: 5px;
+}
+
+.normalpad {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.highpad {
+  text-align: center;
+  padding-bottom: 60px;
+  top: 100%;
+}
+
+.hasha {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  text-align: center;
+  position: absolute;
+  left: 42%;
+  border-color: white;
+}
+
+.hashinput {
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  text-align: center;
+  position: absolute;
+  left: 45%;
+}
+
+.text {
+  margin: auto;
+  color: white;
 }
 
 input {
   font-size: 18px;
-  width: 200px;
+  width: 70px;
+  text-align: center;
+}
+
+.inputlong {
+  font-size: 18px;
+  width: 300px;
+  text-align: center;
 }
 
 table {
@@ -117,87 +231,66 @@ label {
   font-size: 18px;
 }
 
-.button1 {
-  background-color: rgb(0, 0, 0);
-  cursor: pointer;
-  font-size: 16px;
-  color: white;
-  margin: 4px 18px;
-  padding: 8px 40px;
-  border: none;
-  position: relative;
-  top: 25px;
-}
-
 .center {
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
-  width: 500px;
+  text-align: center;
+  width: 100%;
   font-size: 18px;
   padding-left: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
 }
 
-.loginbtn:hover {
-  background-color: blue;
-}
-
-.button1:hover {
-  animation-delay: 2s;
-  background-color: rgb(119, 119, 119);
+.hidden {
+  display: none;
 }
 
 .cardtheme1 {
   position: absolute;
-  top: 14%;
-  right: 4%;
+  right: 62%;
+  bottom: 10%;
 }
 
-.cardtheme2 {
-  position: absolute;
-  top: 14%;
-  right: 14%;
+.hashtable {
+  position: relative;
+  left: 40%;
+  width: 400px;
+  text-align: center;
+  border: solid 3px;
+  border-color: rgb(131, 131, 0);
+  text-align: center;
 }
 
-.cardtheme3 {
-  position: absolute;
-  top: 14%;
-  right: 24%;
+.allinput {
+  width: 60px;
+  text-align: center;
 }
 
-.bfaaddon {
-  position: absolute;
-  top: 16.5%;
-  right: 45%;
+.lineinput {
+  width: 180px;
+  text-align: center;
 }
 
-.bfarajz {
-  position: absolute;
-  top: 30%;
-  right: 25%;
+.tree-red {
+  font-family: Georgia;
+  font-size: x-large;
+  color: azure;
+  background-color: red;
+  border: 2px solid rgb(153, 0, 255);
+  border-radius: 50%;
+  text-align: center;
+  margin: 15px 15px 5px 5px;
+  padding: 5px 10px 10px 10px;
 }
-
-.mesterinput1 {
-  width: 100px;
-}
-
-.mesterinput2 {
-  width: 100px;
-}
-
-.mesterform{
-  position: absolute;
-  left: 5%;
-}
-
-.mesterbtn{
-  position: absolute;
-  left: 115%;
-}
-.mestera{
-  padding-right: 15px;
-}
-.adminsight{
-  position: absolute;
-  left: 45%;
+.tree-black {
+  font-family: Georgia;
+  font-size: x-large;
+  color: azure;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid rgb(153, 0, 255);
+  border-radius: 50%;
+  border-style: solid;
+  text-align: center;
+  margin: 15px 15px 5px 5px;
+  padding: 5px 10px 10px 10px;
 }

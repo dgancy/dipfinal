@@ -1,0 +1,446 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(80, 0, 0);
+  color: white;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+a {
+  font-family: Georgia;
+}
+
+pre {
+  color: white;
+}
+
+.navbar {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.div-body {
+  padding-left: 24px;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding-top: 4%;
+}
+
+.navbtn {
+  background-color: rgb(0, 0, 0);
+  padding: 1px;
+  margin: 1px 10px;
+  position: static;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.light-mode {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.red-mode {
+  background-color: rgb(80, 0, 0);
+  color: white;
+}
+
+.damo {
+  padding: 2px;
+  color: white;
+  margin: 2px 8px;
+  position: static;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.loginbtn {
+  position: absolute;
+  top: 8px;
+  right: 2.5%;
+  color: white;
+}
+
+.test {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+.bevitel {
+  width: 100%;
+  padding-bottom: 18px;
+  padding-left: 5%;
+}
+
+.circle-black-edge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(0, 0, 0);
+  border-style: solid;
+  border-radius: 50%;
+  border-color: rgb(114, 114, 114);
+  font-family: Georgia;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+}
+
+.circle-red-left-1 {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 0, 0);
+  border-style: solid;
+  border-radius: 50%;
+  border-color: rgb(114, 114, 114);
+  font-family: Georgia;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  left: 60%;
+  top: 42%;
+
+}
+
+.circle-red-right-1 {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 0, 0);
+  border-style: solid;
+  border-radius: 50%;
+  border-color: rgb(114, 114, 114);
+  font-family: Georgia;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  left: 40%;
+  top: 42%;
+}
+
+.square-normal {
+  display: flex;
+  width: 250px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  left: 10%;
+  top: 40%;
+  border-style: solid;
+}
+
+.square-edge {
+  display: flex;
+  width: 125px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  left: 47%;
+  border-style: solid;
+}
+
+.square-right_1 {
+  display: flex;
+  width: 125px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  left: 60%;
+  top: 100%;
+  border-style: solid;
+}
+
+.square-left_1 {
+  display: flex;
+  width: 125px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  left: 33%;
+  top: 100%;
+  border-style: solid;
+}
+
+.square-middle_1 {
+  display: flex;
+  width: 125px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  left: 40%;
+  top: 100%;
+  border-style: solid;
+}
+
+.square-middle_2 {
+  display: flex;
+  width: 125px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  left: 54%;
+  top: 100%;
+  border-style: solid;
+}
+
+.square-right_2 {
+  display: flex;
+  width: 125px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  left: 68%;
+  top: 100%;
+  border-style: solid;
+}
+
+.square-left_2 {
+  display: flex;
+  width: 125px;
+  height: 50px;
+  background-color: rgb(145, 145, 145);
+  position: absolute;
+  left: 27%;
+  top: 100%;
+  border-style: solid;
+}
+
+.lowpad {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.normalpad {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.highpad {
+  text-align: center;
+  padding-bottom: 60px;
+  top: 100%;
+}
+
+.hasha {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  text-align: center;
+  position: absolute;
+  left: 42%;
+  border-color: white;
+}
+
+.hashinput {
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  text-align: center;
+  position: absolute;
+  left: 45%;
+
+}
+
+.text {
+  margin: auto;
+  color: white;
+}
+
+.testimg {
+  max-height: 125px;
+}
+
+.testinput {
+  text-align: left;
+  position: relative;
+}
+
+.testbutton {
+  text-align: center;
+}
+
+input {
+  font-size: 18px;
+  width: 70px;
+  text-align: center;
+}
+
+table {
+  padding-bottom: 10px;
+}
+
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  width: 240px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.button1 {
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  margin: 4px 18px;
+  padding: 8px 40px;
+  border: none;
+  position: relative;
+  top: 25px;
+}
+
+.center {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+.loginbtn:hover {
+  background-color: blue;
+}
+
+.button1:hover {
+  animation-delay: 2s;
+  background-color: rgb(119, 119, 119);
+}
+
+.cardtheme1 {
+  position: absolute;
+  right: 62%;
+  bottom: 10%;
+}
+
+.cardtheme2 {
+  position: absolute;
+  right: 50%;
+  bottom: 10%;
+}
+
+.cardtheme3 {
+  position: absolute;
+  right: 38%;
+  bottom: 10%;
+}
+
+.cardtheme11 {
+  position: absolute;
+  right: 62%;
+  top: 10%;
+}
+
+.cardtheme21 {
+  position: absolute;
+  right: 50%;
+  top: 10%;
+}
+
+.cardtheme31 {
+  position: absolute;
+  right: 38%;
+  top: 10%;
+}
+
+.bfaaddon {
+  position: absolute;
+  top: 16.5%;
+  right: 45%;
+}
+
+.bfarajz {
+  position: absolute;
+  top: 30%;
+  right: 25%;
+}
+
+.hashtable {
+  position: relative;
+  left: 40%;
+  width: 400px;
+  text-align: center;
+  border: solid 3px;
+  border-color: rgb(131, 131, 0);
+  text-align: center;
+}
+
+.allinput {
+  width: 60px;
+  text-align: center;
+}
+
+.lineinput {
+  width: 180px;
+  text-align: center;
+}
+
+.mesterform {
+  position: absolute;
+  left: 5%;
+}
+
+.mesterbtn {
+  position: absolute;
+  left: 115%;
+}
+
+.mestera {
+  padding-right: 15px;
+}
+
+.adminsight {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  display: none;
+}
+
+.help {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+}
+
+.aeredmeny {
+  font-family: Georgia;
+}

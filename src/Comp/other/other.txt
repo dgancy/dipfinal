@@ -1,0 +1,25 @@
+require("crypto").randomBytes(64).toString("hex"); //token generate
+
+
+
+<div >
+      <a >T értéke (a): </a>
+          <input type="text" name="A" className="mesterinput"/>
+      </div>
+      <br />
+      <div >
+      <a>n-es tag (b): </a>
+          <input type="text" name="B" className="mesterinput"/>
+      </div>
+      <br />
+      <div >
+          <a>n : </a>
+          <input type="text" name="N" className="mesterinput"/>
+          <br />
+          <br />
+        <div>
+          <Button onClick={szamol} variant="secondary">
+            Megold
+          </Button>
+        </div>
+      </div>
