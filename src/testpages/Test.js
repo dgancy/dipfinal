@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
+
+var userid = "00";
 
 var testpaths = [];
 
@@ -38,7 +40,7 @@ var counterbreak = 0;
 for (let i = 0; i < 30; i++) {
   userarray[i] = "NIL";
 }
-console.log(testpaths);
+//console.log(testpaths);
 
 function generate() {
   document.getElementById("showquests").style.display = "block";
@@ -56,7 +58,7 @@ function generate() {
       var nsup = Math.floor(Math.random() * 4) + 1;
       n = "n" + "<sup>" + nsup + "</sup>";
       if (n == "n" + "<sup>" + 4 + "</sup>") {
-        n = "nlog" + "<sup>n</sup>";
+        n = "nlogn";
       }
       if (n == "n" + "<sup>" + 1 + "</sup>") {
         n = "n";
@@ -644,6 +646,8 @@ function Kirajzol() {
   direction = [];
 }
 
+var allmistakes = [];
+
 function FinalCheck() {
   var user_a_element = document.getElementById("quest2-a-elem").value; //Mestercheck
   var user_b_element = document.getElementById("quest2-b-elem").value;
@@ -699,13 +703,16 @@ function FinalCheck() {
     user_b_element != b_elem ||
     user_n_element != n
   ) {
-    mistakes_mester.push("Hibás leolvasás!");
+    mistakes_mester.push("2. -es feladat: Hibás leolvasás!");
+    allmistakes.push(userid + "0100");
   }
   if (user_eset != eset || user_E_element != e) {
-    mistakes_mester.push(" Hibás eset választás!");
+    mistakes_mester.push("2. -es feladat: Hibás eset választás!");
+    allmistakes.push(userid + "0101");
   }
   if (user_master_result != n) {
-    mistakes_mester.push(" Hibás eredmény!");
+    mistakes_mester.push("2. -es feladat: Hibás eredmény!");
+    allmistakes.push(userid + "0102");
   }
   document.getElementById("final-questtwo-0").innerHTML = mistakes_mester[0];
   document.getElementById("final-questtwo-1").innerHTML = mistakes_mester[1];
@@ -749,19 +756,23 @@ function FinalCheck() {
     user_N_element != N_elem ||
     user_n_element != n_rekurzios
   ) {
-    mistakes_recursion_tree.push("Hibás leolvasás!");
+    mistakes_recursion_tree.push("1. -es feladat: Hibás leolvasás!");
+    allmistakes.push(userid + "0000");
   }
   if (
     user_1edge_element != one_edge_element_result ||
     user_edge_number != edge_number
   ) {
-    mistakes_recursion_tree.push("Hibás helyettesítés!");
+    mistakes_recursion_tree.push("1. -es feladat: Hibás helyettesítés!");
+    allmistakes.push(userid + "0001");
   }
   if (user_all_cost != all_cost || user_tree_high != magassag) {
-    mistakes_recursion_tree.push("Hibás helyettesítés!");
+    mistakes_recursion_tree.push("1. -es feladat: Hibás helyettesítés!");
+    allmistakes.push(userid + "0002");
   }
   if (user_leaf_number != levelszameredmeny) {
-    mistakes_recursion_tree.push("Hibás eredmény!");
+    mistakes_recursion_tree.push("1. -es feladat: Hibás eredmény!");
+    allmistakes.push(userid + "0003");
   }
   console.log(mistakes_recursion_tree);
   document.getElementById("final-quest-one-0").innerHTML =
@@ -775,7 +786,6 @@ function FinalCheck() {
 
   var edgearray = [];
   edgearray = document.getElementById("inp0").value.split(",");
-
   var leftarrayone = [];
   leftarrayone = document.getElementById("inp1").value.split(",");
   var leftarraytwo = [];
@@ -853,7 +863,7 @@ function FinalCheck() {
       OutputArrayMiddle_1.push(Change);
       OutputArrayEdge.sort();
       OutputArrayMiddle_1.sort();
-    } //ellenorzo feladat 9,2,5,7,6,5,4,1
+    }
     if (OutputArrayEdge.length == edgemax + 1) {
       for (let k = 0; k < 2; k++) {
         if (
@@ -1018,14 +1028,15 @@ function FinalCheck() {
   }
   console.log(points);
 
-  if (array.length != 0) {
-    document.getElementById("final-questthree-0").innerHTML = "Nincs feladat!";
-  } else if (points == array.length) {
+  if (points == array.length && points != 0) {
     {
-      document.getElementById("final-questthree-0").innerHTML = "Jó megoldás!";
+      document.getElementById("final-questthree-0").innerHTML =
+        "3. -as feladata: Jó megoldás!";
     }
   } else {
-    document.getElementById("final-questthree-0").innerHTML = "Hibás megoldás!";
+    document.getElementById("final-questthree-0").innerHTML =
+      "3. -as feladata: Hibás megoldás!";
+    allmistakes.push(userid + "0200");
   }
 
   var userresult = []; //Backpropagation
@@ -1057,9 +1068,12 @@ function FinalCheck() {
   }
 
   if (point === solve.length) {
-    document.getElementById("final-quest-four").innerHTML = "Jó megoldás!";
+    document.getElementById("final-quest-four").innerHTML =
+      "4.-es feladat: Jó megoldás!";
   } else {
-    document.getElementById("final-quest-four").innerHTML = "Hibás megoldás!";
+    document.getElementById("final-quest-four").innerHTML =
+      "4.-es feladat: Hibás megoldás!";
+    allmistakes.push(userid + "0300");
   }
 
   var leftover; //Hash
@@ -1137,9 +1151,12 @@ function FinalCheck() {
   }
   console.log(counter);
   if (counter == hossz) {
-    document.getElementById("final-quest-five").innerHTML = "Jó megoldás!";
+    document.getElementById("final-quest-five").innerHTML =
+      "6.-os feladat: Jó megoldás!";
   } else {
-    document.getElementById("final-quest-five").innerHTML = "Hibás megoldás!";
+    document.getElementById("final-quest-five").innerHTML =
+      "6.-oes feladat: Hibás megoldás!";
+    allmistakes.push(userid + "0500");
   }
 
   var errorColor = "Jó megoldás";
@@ -1190,25 +1207,60 @@ function FinalCheck() {
         errorNumbers = "Hibás megolodás, hiba oka: Hibás számsor";
       }
     }
+    if (colors.length < 3 || userarray.length < 3) {
+      errorNumbers = "Nincs kitöltve";
+      errorColor = "Nincs kitöltve";
+    }
     if (errorColor == "Jó megoldás" && errorNumbers == "Jó megoldás") {
       document.getElementById("final-quest-five").innerHTML = "Jó megoldás";
     } else if (errorColor != "Jó megoldás" && errorNumbers == "Jó megoldás") {
       document.getElementById("final-quest-five").innerHTML =
-        "Szín hiba, rossz megoldás";
+        "5.-ös feladat: Szín hiba, rossz megoldás";
+      allmistakes.push(userid + "0500");
     } else if (errorColor == "Jó megoldás" && errorNumbers != "Jó megoldás") {
       document.getElementById("final-quest-five").innerHTML =
-        "Számsor hiba, rossz megoldás";
-    } else if (errorColor != "Jó megoldás" && errorNumbers != "Jó megoldás") {
+        "5.-ös feladat: Számsor hiba, rossz megoldás";
+      allmistakes.push(userid + "0501");
+    } else if (
+      (errorColor != "Jó megoldás" &&
+        errorNumbers != "Jó megoldás" &&
+        errorNumbers != "Nincs kitöltve") ||
+      errorColor != "Nincs kitöltve"
+    ) {
       document.getElementById("final-quest-five").innerHTML =
-        "Több hiba, rossz megoldás";
+        "5.-ös feladat: Több hiba, rossz megoldás";
+      allmistakes.push(userid + "0502");
     }
   }
 }
 export default function Test() {
+
+  const [data, setData] = useState({
+    getuserid: "",
+  });
+  
+  const { getuserid } = data;
+  
+  const send = () => {
+    const result = fetch(`http://localhost:80/ID/email/:email/${getuserid}`, {
+      method: "GET",
+      // mode: "cors",
+      headers: {
+        "Content-Type": "text/plain",
+      },
+    });
+    result.then((value) => {
+      value.json().then((res) => {
+        console.log(res);
+        userid = res;
+      });
+    });
+  };
+
   return (
     <form>
       <div className="test">
-        <h2>Test</h2>
+        <h2>Teszt</h2>
         <Button
           variant="success"
           className="btn"

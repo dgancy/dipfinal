@@ -7,11 +7,20 @@ var fokszam = 2;
 function Generate() {
   document.getElementById("showcheckbtn").style.display = "block";
 
-  var hossz = Math.floor(Math.random() * 3) + 9;
+  var hossz = Math.floor(Math.random() * 3) + 7;
   var input = document.getElementById("generate");
 
   for (let i = 0; i < hossz; i++) {
-    array.push(Math.floor(Math.random() * 100));
+    array.push(Math.floor(Math.random() * 50)+1);
+    if (i == hossz - 1) {
+      array.sort();
+      for (let j = 0; j < hossz; j++) {
+        if (array[j] == array[j + 1] || array[j] == array[j - 1]) {
+          array[j] += 1;
+          array.sort();
+        }
+      }
+    }
   }
 
   for (let i = 0; i < 7; i++) {

@@ -52,7 +52,7 @@ function Generate() {
     j +
     '">    <br/>   ';
   document.getElementById("leiras").innerHTML =
-    "Visszalépéses keresést alkalmazunk a pénzváltás problémára. Egy megoldáskezdemény áll rendelkezésünkre: < " +
+    "Visszalépéses keresést alkalmazunk a pénzváltás problémára.<br/> Egy megoldáskezdemény áll rendelkezésünkre: < " +
     kezdmo +
     " > <br/> Összesen " +
     ÖsszesCimlet +

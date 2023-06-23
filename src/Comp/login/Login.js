@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -20,19 +19,12 @@ export default function Login() {
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(data);
-    // setTimeout(function () {
-    //   navigate("/dip");
-    // }, 4000);
+     setTimeout(function () {
+       navigate("/dip");
+     }, 4000);
   };
 
   const send = () => {
-    // const result = fetch(
-    //   "http://localhost:3000/login/" +
-    //     new URLSearchParams({
-    //       name: username.data,
-    //       password: password.data,
-    //     })
-    //     )
     const result = fetch (`http://localhost:80/login/name/${username}/password/${password}`,{
         method: "GET",
         // mode: "cors",
@@ -57,11 +49,11 @@ export default function Login() {
           <br />
           <div class="row justify-content-center text-center">
             <div class="col-4 ">
-              <b for="exampleInputEmail1">UserName:</b>
+              <b for="exampleInputEmail1">Email:</b>
               <input
                 type="text"
                 class="form-control"
-                placeholder="Username"
+                placeholder="Email"
                 name="username"
                 value={username}
                 onChange={changeHandler}
